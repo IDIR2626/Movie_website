@@ -5,7 +5,7 @@ const IMGPATH = 'https://image.tmdb.org/t/p/w1280';
 const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=9c7ca00360e402b5365f6803135f4327&query=";
 
 const main = document.getElementById('section');
-const form = document.getElementById('fom');
+const form = document.getElementById('form');
 const search = document.getElementById('query');
 
 
@@ -14,6 +14,7 @@ function returnMovies(url) {
     fetch(url)
         .then(res => res.json())
         .then(data => {
+            main.innerHTML = '';    // clear previous search results
             data.results.forEach(element => {
                 const div_card = document.createElement('div');
                 div_card.className = 'card';
@@ -46,11 +47,15 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     main.innerHTML = '';
     const searchValue = search.value;
+    console.log('Form submitted');
+    console.log('Search value:', searchValue);
 
-    if(searchValue){
+    if (searchValue) {
+        console.log('Fetching:', SEARCHAPI + searchValue);
         returnMovies(SEARCHAPI + searchValue);
         search.value = '';
     } else {
+        console.log('Fetching:', APILINK);
         returnMovies(APILINK);
     }
 });
