@@ -8,6 +8,8 @@ const main = document.getElementById('section');
 const form = document.getElementById('fom');
 const search = document.getElementById('query');
 
+
+returnMovies(APILINK);
 function returnMovies(url) {
     fetch(url)
         .then(res => res.json())
@@ -39,4 +41,18 @@ function returnMovies(url) {
         );
 }
 
-returnMovies(APILINK);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    main.innerHTML = '';
+    const searchValue = search.value;
+
+    if(searchValue){
+        returnMovies(SEARCHAPI + searchValue);
+        search.value = '';
+    } else {
+        returnMovies(APILINK);
+    }
+});
+
+
