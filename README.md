@@ -28,4 +28,4 @@ This project is a simple web application that interacts with the Movie Database 
 
 Here is a video demo of the website:
 
-![Movie Website Demo](movie_wesite_demo.mp4)
+[![Movie Website Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/eez4WhCnFrw)
