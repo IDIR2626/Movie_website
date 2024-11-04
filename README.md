@@ -23,3 +23,9 @@ This project is a simple web application that interacts with the Movie Database 
    ```bash
      git clone https://github.com/IDIR2626/Movie_website.git
    ```
+
+## Demo
+
+Here is a video demo of the website:
+
+![Movie Website Demo](movie_wesite_demo.mp4)
