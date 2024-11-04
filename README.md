@@ -21,5 +21,5 @@ This project is a simple web application that interacts with the Movie Database 
 
 1. Clone the repository:
    ```bash
-     [git clone](https://github.com/IDIR2626/Movie_website.git)
+     git clone https://github.com/IDIR2626/Movie_website.git
    ```
